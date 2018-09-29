@@ -1,17 +1,17 @@
 version: '3'
-  services:
-    wekan:
-      image: 'mquandalle/wekan'
-      restart: always
-      environment:
-        MONGO_URL: mongodb://db
-        ROOT_URL: 192.168.99.101:80
-      ports:
-        80:80
-      link:
-        - mongodb
-    mongodb:
-      image: 'mongo'
-      restart: always
+services:
+  wekan:
+    image: 'mquandalle/wekan'
+    restart: always
+    environment:
+      MONGO_URL: mongodb://db
+      ROOT_URL: 192.168.99.101:80
+    ports:
+      80:80
+    link:
+      - mongodb
+  mongodb:
+    image: 'mongo'
+    restart: always
 
 
